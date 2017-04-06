@@ -20,13 +20,13 @@ Since in most cases you can't change the size of a window in a browser via javas
 
 ```html
 <dom-bind>
-	<template>
-		<window-size width="{{width}}" height="{{height}}"></window-size>
-		<div>
-			<span>Width: {{width}} px</span>
-			<span>Height: {{height}} px</span>
-		</div>
-	</template>
+  <template>
+    <window-size width="{{width}}" height="{{height}}"></window-size>
+    <div>
+      <span>Width: {{width}} px</span>
+      <span>Height: {{height}} px</span>
+    </div>
+  </template>
 </dom-bind>
 ```
 
