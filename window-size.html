@@ -1,0 +1,66 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`window-size`
+
+@demo demo/index.html
+-->
+
+<dom-module id="window-size">
+	<script>
+		'use strict';
+
+		class MyElement extends Polymer.Element {
+
+			static get is() {
+				return 'window-size';
+			}
+
+			static get properties() {
+				return {
+					/**
+					 * The window's (inner) width
+					 */
+					width: {
+						type: Number,
+						readOnly: true,
+						notify: true
+					},
+					/**
+					 * The window's (inner) height
+					 */
+					height: {
+						type: Number,
+						readOnly: true,
+						notify: true
+					}
+				};
+			}
+
+			constructor() {
+				super();
+				this._boundWindowResizeListener = this._windowResizeListener.bind(this);
+			}
+
+			connectedCallback() {
+				super.connectedCallback();
+				this._boundWindowResizeListener();
+				window.addEventListener('resize', this._boundWindowResizeListener);
+			}
+
+			disconnectedCallback() {
+				super.disconnectedCallback();
+				window.removeEventListener('resize', this._boundWindowResizeListener);
+			}
+
+
+			_windowResizeListener() {
+				this._setWidth(window.innerWidth);
+				this._setHeight(window.innerHeight);
+			}
+
+		}
+
+		window.customElements.define(MyElement.is, MyElement);
+	</script>
+</dom-module>

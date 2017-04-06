@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+		<title>window-size demo</title>
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+		<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+		<link rel="import" href="../window-size.html">
+		<custom-style>
+			<style include="demo-pages-shared-styles">
+			</style>>
+		</custom-style>
+		<style>
+			#title {
+				display: block;
+				margin-bottom: 20px;
+			}
+			#container{
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-around;
+				font-size: 200%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="vertical-section-container centered">
+			<demo-snippet>
+				<template>
+					<dom-bind>
+						<template>
+							<window-size width="{{width}}" height="{{height}}"></window-size>
+							<span id="title">Resize the browser's window to see the text below reflect the window's width and height changes in real time.</span>
+							<div id="container">
+								<span>Width: {{width}} px</span>
+								<span>Height: {{height}} px</span>
+							</div>
+						</template>
+					</dom-bind>
+				</template>
+			</demo-snippet>
+		</div>
+	</body>
+</html>

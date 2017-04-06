@@ -1,0 +1,17 @@
+{
+	"name": "window-size",
+	"version": "1.0.0-preview",
+	"description": "A Polymer element that manages data binding to the window's size.",
+	"main": "window-size.html",
+	"dependencies": {
+		"polymer": "Polymer/polymer#^2.0.0-rc.2"
+	},
+	"devDependencies": {
+		"iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
+		"iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
+		"webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.5"
+	},
+	"resolutions": {
+		"polymer": "^2.0.0-rc.2"
+	}
+}
