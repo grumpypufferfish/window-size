@@ -1,6 +1,6 @@
 {
 	"name": "window-size",
-	"version": "1.0.0-preview",
+	"version": "v1.0.0-preview",
 	"description": "A Polymer element that manages data binding to the window's size.",
 	"main": "window-size.html",
 	"dependencies": {
