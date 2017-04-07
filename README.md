@@ -3,7 +3,7 @@
 
 ## &lt;window-size&gt;
 
-The `window-size` element manages data binding to the window&#39;s size. This component will most likely be used with other polymer components.
+The `window-size` element manages data binding to the window&#39;s size. This component will most likely be used with other polymer components. If you are new to Polymer, the [Polymer website](https://www.polymer-project.org/) is the best place to start.
 
 #### Properties
 
@@ -17,6 +17,8 @@ Since in most cases you can't change the size of a window in a browser via javas
 `window-size` is only active while it is attached to the document.
 
 #### Usage
+
+`window-size` will more likely be used inside your Polymer element's template. In order to allow data binding to work outside a Polymer element, you need to wrap your code inside an auto-binding template, as shown in the following code snippet (new Polymer 2.0 syntax):
 
 ```html
 <dom-bind>
